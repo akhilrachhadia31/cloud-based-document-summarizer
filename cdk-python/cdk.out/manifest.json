@@ -1,0 +1,286 @@
+{
+  "version": "36.3.0",
+  "artifacts": {
+    "DocumentSummarizationStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "DocumentSummarizationStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/mystack/version"
+      }
+    },
+    "DocumentSummarizationStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://477252478797/ap-south-1",
+      "properties": {
+        "templateFile": "DocumentSummarizationStack.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "Application": "DocumentSummarization",
+          "CostCenter": "AI-ML",
+          "Environment": "development",
+          "Owner": "CDK"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::477252478797:role/cdk-mystack-deploy-role-477252478797-ap-south-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::477252478797:role/cdk-mystack-cfn-exec-role-477252478797-ap-south-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-mystack-assets-477252478797-ap-south-1/a0df71421bdfcb30ba2423e03b4452f2b2de34385fac43d4b0fb14d7a59e291e.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/mystack/version",
+        "additionalDependencies": [
+          "DocumentSummarizationStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::477252478797:role/cdk-mystack-lookup-role-477252478797-ap-south-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/mystack/version"
+        }
+      },
+      "dependencies": [
+        "DocumentSummarizationStack.assets"
+      ],
+      "metadata": {
+        "/DocumentSummarizationStack": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "Application",
+                "Value": "DocumentSummarization"
+              },
+              {
+                "Key": "CostCenter",
+                "Value": "AI-ML"
+              },
+              {
+                "Key": "Environment",
+                "Value": "development"
+              },
+              {
+                "Key": "Owner",
+                "Value": "CDK"
+              }
+            ]
+          }
+        ],
+        "/DocumentSummarizationStack/DocumentInputBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DocumentInputBucketE60BB293"
+          }
+        ],
+        "/DocumentSummarizationStack/DocumentInputBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DocumentInputBucketPolicyAF95E3F9"
+          }
+        ],
+        "/DocumentSummarizationStack/DocumentInputBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DocumentInputBucketAutoDeleteObjectsCustomResource4D64F21E"
+          }
+        ],
+        "/DocumentSummarizationStack/DocumentInputBucket/Notifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DocumentInputBucketNotifications7D557A1E"
+          }
+        ],
+        "/DocumentSummarizationStack/DocumentInputBucket/AllowBucketNotificationsToDocumentSummarizationStackDocumentProcessorFunctionA1F3196D": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DocumentInputBucketAllowBucketNotificationsToDocumentSummarizationStackDocumentProcessorFunctionA1F3196D7783FFE6"
+          }
+        ],
+        "/DocumentSummarizationStack/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+            "data": true
+          }
+        ],
+        "/DocumentSummarizationStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/DocumentSummarizationStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/DocumentSummarizationStack/SummaryOutputBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SummaryOutputBucket89F69C6D"
+          }
+        ],
+        "/DocumentSummarizationStack/SummaryOutputBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SummaryOutputBucketPolicy0D947B03"
+          }
+        ],
+        "/DocumentSummarizationStack/SummaryOutputBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SummaryOutputBucketAutoDeleteObjectsCustomResourceDF699263"
+          }
+        ],
+        "/DocumentSummarizationStack/DocumentMetadataTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DocumentMetadataTable6ED808AA"
+          }
+        ],
+        "/DocumentSummarizationStack/DocumentProcessingNotifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DocumentProcessingNotificationsA8A56DAD"
+          }
+        ],
+        "/DocumentSummarizationStack/DocumentProcessorRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DocumentProcessorRole12EFF6D7"
+          }
+        ],
+        "/DocumentSummarizationStack/DocumentProcessorRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DocumentProcessorRoleDefaultPolicy958A42A5"
+          }
+        ],
+        "/DocumentSummarizationStack/DocumentProcessorFunction/DeadLetterQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DocumentProcessorFunctionDeadLetterQueueB6493B8B"
+          }
+        ],
+        "/DocumentSummarizationStack/DocumentProcessorFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DocumentProcessorFunction7AF0618E"
+          }
+        ],
+        "/DocumentSummarizationStack/DocumentProcessorFunction/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DocumentProcessorFunctionLogRetentionBC25C463"
+          }
+        ],
+        "/DocumentSummarizationStack/DocumentProcessorFunction/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DocumentProcessorFunctionEventInvokeConfig96A4BF37"
+          }
+        ],
+        "/DocumentSummarizationStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+          }
+        ],
+        "/DocumentSummarizationStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB"
+          }
+        ],
+        "/DocumentSummarizationStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A"
+          }
+        ],
+        "/DocumentSummarizationStack/DocumentSummarizationDashboard/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DocumentSummarizationDashboard76863BFC"
+          }
+        ],
+        "/DocumentSummarizationStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+          }
+        ],
+        "/DocumentSummarizationStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36"
+          }
+        ],
+        "/DocumentSummarizationStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691"
+          }
+        ],
+        "/DocumentSummarizationStack/InputBucketName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InputBucketName"
+          }
+        ],
+        "/DocumentSummarizationStack/OutputBucketName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OutputBucketName"
+          }
+        ],
+        "/DocumentSummarizationStack/ProcessorFunctionName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProcessorFunctionName"
+          }
+        ],
+        "/DocumentSummarizationStack/MetadataTableName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MetadataTableName"
+          }
+        ],
+        "/DocumentSummarizationStack/NotificationTopicArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NotificationTopicArn"
+          }
+        ],
+        "/DocumentSummarizationStack/DashboardURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DashboardURL"
+          }
+        ],
+        "/DocumentSummarizationStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/DocumentSummarizationStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/DocumentSummarizationStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "DocumentSummarizationStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

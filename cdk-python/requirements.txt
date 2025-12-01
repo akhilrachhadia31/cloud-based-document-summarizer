@@ -1,0 +1,18 @@
+# AWS CDK Python Dependencies for Document Summarization Stack
+# Core CDK library and constructs
+aws-cdk-lib>=2.120.0,<3.0.0
+constructs>=10.0.0,<12.0.0
+
+# Development and testing dependencies (optional)
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=22.0.0
+flake8>=5.0.0
+mypy>=1.0.0
+
+# AWS SDK (for local testing and deployment)
+boto3>=1.26.0
+# awscli is installed separately (already on your system), so we do NOT install it via pip
+
+# Python type hints and utilities
+typing-extensions>=4.0.0

@@ -1,0 +1,62 @@
+{
+  "version": "36.3.0",
+  "files": {
+    "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6": {
+      "source": {
+        "path": "asset.faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "477252478797-ap-south-1": {
+          "bucketName": "cdk-mystack-assets-477252478797-ap-south-1",
+          "objectKey": "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6.zip",
+          "region": "ap-south-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::477252478797:role/cdk-mystack-file-publishing-role-477252478797-ap-south-1"
+        }
+      }
+    },
+    "dfdd39d6172dc5095c85f64b3fb04a5c556027d5d0cb556bf177ca1f74233231": {
+      "source": {
+        "path": "asset.dfdd39d6172dc5095c85f64b3fb04a5c556027d5d0cb556bf177ca1f74233231",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "477252478797-ap-south-1": {
+          "bucketName": "cdk-mystack-assets-477252478797-ap-south-1",
+          "objectKey": "dfdd39d6172dc5095c85f64b3fb04a5c556027d5d0cb556bf177ca1f74233231.zip",
+          "region": "ap-south-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::477252478797:role/cdk-mystack-file-publishing-role-477252478797-ap-south-1"
+        }
+      }
+    },
+    "4e26bf2d0a26f2097fb2b261f22bb51e3f6b4b52635777b1e54edbd8e2d58c35": {
+      "source": {
+        "path": "asset.4e26bf2d0a26f2097fb2b261f22bb51e3f6b4b52635777b1e54edbd8e2d58c35",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "477252478797-ap-south-1": {
+          "bucketName": "cdk-mystack-assets-477252478797-ap-south-1",
+          "objectKey": "4e26bf2d0a26f2097fb2b261f22bb51e3f6b4b52635777b1e54edbd8e2d58c35.zip",
+          "region": "ap-south-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::477252478797:role/cdk-mystack-file-publishing-role-477252478797-ap-south-1"
+        }
+      }
+    },
+    "a0df71421bdfcb30ba2423e03b4452f2b2de34385fac43d4b0fb14d7a59e291e": {
+      "source": {
+        "path": "DocumentSummarizationStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "477252478797-ap-south-1": {
+          "bucketName": "cdk-mystack-assets-477252478797-ap-south-1",
+          "objectKey": "a0df71421bdfcb30ba2423e03b4452f2b2de34385fac43d4b0fb14d7a59e291e.json",
+          "region": "ap-south-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::477252478797:role/cdk-mystack-file-publishing-role-477252478797-ap-south-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <title>Document Auto Summarization</title>
+          <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+          <div class="wrapper">
+                    <header>
+                              <h1>Document Summarizer</h1>
+                              <p class="subtitle">Upload a document and get a clean, readable summary.</p>
+                    </header>
+
+                    <div class="upload-card">
+                              <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+                                        <label for="document">Choose a document:</label>
+                                        <input type="file" id="document" name="document" required>
+                                        <button type="submit">Generate Summary</button>
+                              </form>
+
+                              {% if filename %}
+                              <p class="info">Uploaded: <strong>{{ filename }}</strong></p>
+                              {% endif %}
+
+                              {% if error %}
+                              <div class="error">{{ error }}</div>
+                              {% endif %}
+                    </div>
+
+                    {% if summary_text %}
+                    <section class="summary-section">
+                              <h2>Summary</h2>
+                              <div class="summary-box">
+                                        <pre>{{ summary_text }}</pre>
+                              </div>
+                    </section>
+                    {% endif %}
+          </div>
+</body>
+
+</html>
